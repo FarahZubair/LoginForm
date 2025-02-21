@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('/desktop-wallpaper-scenic-background.jpg') no-repeat center center/cover;
+            overflow: hidden;
+            position: relative;
+        }
+
+        login-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+            width: 300px;
+            text-align: center;
+            color: white;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .login-container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+            width: 300px;
+            text-align: center;
+            color: white;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            transition: 0.3s;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: #e06eeb;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-container input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .login-container input:focus {
+            border-color: #f82020;
+            outline: none;
+            box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .login-container button:hover {
+            transform: scale(1.05);
+        }
+ 
+        .login-container .signup-btn {
+            background: #e798d4;
+            color: white;
+        }
+
+        .login-container .signup-btn:hover {
+            background: #eb92df;
+            box-shadow: 0 0 10px rgb(230, 159, 230);
+        }
+
+        .login-container .login-btn {
+            margin-top: 10px;
+            background: #f51e1e;
+            color: white;
+        }
+
+        .login-container .login-btn:hover {
+            background: #db0303;
+            box-shadow: 0 0 10px rgb(247, 31, 31);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .login-container {
+                padding: 15px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Signup</h2>
+        <form>
+            <input type="email" placeholder="Email" id="email" />
+            <input type="password" placeholder="Password" id="password" />
+            <button type="submit" id="submit">Signup</button>
+        </form>
+
+        <button class="login-btn" onclick="redirectToLogin()">Already have an account? Login</button>
+    </div>
+
+    <script type="module" src="./signup.js"></script>
+    <script>
+        function redirectToLogin() {
+            window.location.href = "login.html"; 
+        }
+    </script>
+</body>
+
+</html>
